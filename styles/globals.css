@@ -1,16 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,600&display=swap");
+:root {
+  --yellow: #e9e91c;
+  --gray: #cfcfcf;
+  --dark-gray: #111111;
+  --dark-green: #3a6840;
+  --lemon: #ffdf64;
+  --light-green: #afc97e;
+  --dark-brown: #776c58;
+  --light-brown: #877b66;
+  --khaki: #e2d686;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+}
+
+html {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: black;
 }
