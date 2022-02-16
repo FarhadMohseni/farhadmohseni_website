@@ -18,7 +18,7 @@
   border-radius: 1em;
   justify-content: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 0.125fr 1fr;
+  grid-template-rows: 0.005fr 0.25fr 1fr;
 }
 .article_details {
   display: flex;
@@ -47,7 +47,8 @@
 .article_image img {
   width: 100%;
   align-self: center;
-  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
   border-radius: 1em 1em 0 0;
 }
 
@@ -55,7 +56,7 @@
   .articles {
     font-size: 29px;
   }
-  .article_item {
+  /* .article_item {
     grid-template-columns: 1fr;
   }
   .article_details {
@@ -64,7 +65,7 @@
   }
   .article_readmore {
     justify-self: center;
-  }
+  } */
 }
 @media only screen and (max-width: 528px) {
   .main {

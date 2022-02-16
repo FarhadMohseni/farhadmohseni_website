@@ -32,7 +32,7 @@
 .article_summary {
   color: var(--light-brown);
   font-weight: regular;
-  align-self: center;
+  align-self: start;
 }
 .article_image {
   align-self: start;

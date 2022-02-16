@@ -3,11 +3,12 @@ import Link from "next/Link";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 interface Props {
   text: string;
+  back?: string;
 }
-function Header({ text }: Props) {
+function Header({ text, back }: Props) {
   return (
     <div className={styles.header}>
-      <Link href="/">
+      <Link href={back ? back : "/"}>
         <FaLongArrowAltLeft size={30} className={styles.header_back_icon} />
       </Link>
       <div className={styles.header_text}>
