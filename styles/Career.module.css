@@ -1,0 +1,99 @@
+.main {
+  background-color: var(--lemon);
+
+  width: 100%;
+}
+
+.histories {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-gap: 1em;
+  padding: 2rem;
+}
+.histories a:visited {
+  color: var(--caramel);
+}
+.history_item {
+  display: grid;
+  background-color: var(--black-green);
+  border-radius: 1em;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  height: auto;
+  max-height: min-content;
+}
+.history_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.history_title {
+  color: var(--light-gray);
+  font-weight: bold;
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.history_title span {
+  color: var(--caramel);
+  font-weight: regular;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.history_company {
+  color: var(--light-brown);
+  font-weight: regular;
+  align-self: start;
+  font-size: 1rem;
+}
+.history_summary {
+  color: var(--caramel);
+  padding: 2rem;
+  font-size: 1rem;
+  justify-: center;
+}
+.history_summary ul li {
+  padding: 0.2rem 0;
+}
+.history_summary ul ul {
+  padding-left: 1rem;
+  color: var(--light-gray);
+}
+
+@media only screen and (max-width: 900px) {
+  .histories {
+    font-size: 29px;
+    padding: 1rem;
+  }
+
+  /* .history_details {
+    place-items: center;
+    padding: 0.5em;
+  } */
+}
+@media only screen and (max-width: 528px) {
+  .main {
+    font-size: 10px;
+  }
+  .history_summary {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .history_summary {
+    padding: 0.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .histories {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .histories {
+    font-size: 30px;
+  }
+}

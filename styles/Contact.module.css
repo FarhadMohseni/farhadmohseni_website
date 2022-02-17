@@ -1,0 +1,79 @@
+.main {
+  background-color: var(--lemon);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-gap: 1em;
+  padding: 2rem;
+}
+.contact a:visited {
+  color: var(--caramel);
+}
+.contact_item {
+  display: grid;
+  background-color: var(--black-green);
+  border-radius: 1em;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  height: auto;
+  max-height: min-content;
+}
+.contact_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.contact_icon {
+  color: var(--lemon);
+  font-size: 2rem;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.contact_email {
+  color: var(--light-brown);
+  font-weight: regular;
+  align-self: start;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact {
+    font-size: 29px;
+    padding: 1rem;
+  }
+
+  /* .history_details {
+    place-items: center;
+    padding: 0.5em;
+  } */
+}
+@media only screen and (max-width: 528px) {
+  .main {
+    font-size: 10px;
+  }
+  .history_summary {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .history_summary {
+    padding: 0.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .contact {
+    font-size: 30px;
+  }
+}

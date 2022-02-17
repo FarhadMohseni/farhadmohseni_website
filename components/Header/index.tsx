@@ -4,10 +4,11 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 interface Props {
   text: string;
   back?: string;
+  dark?: boolean;
 }
-function Header({ text, back }: Props) {
+function Header({ text, back, dark }: Props) {
   return (
-    <div className={styles.header}>
+    <div className={dark ? styles.header_dark : styles.header}>
       <Link href={back ? back : "/"}>
         <FaLongArrowAltLeft size={30} className={styles.header_back_icon} />
       </Link>

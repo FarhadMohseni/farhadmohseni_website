@@ -4,28 +4,39 @@ import styles from "./Slider.module.css";
 import { useState, useEffect } from "react";
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";
 import { setTimeout } from "timers";
-function index() {
+function Slider() {
   var [activeIndex, setActiveIndex] = useState(0);
   var data = [
     {
-      text: "I Make Music",
+      text: "I Develop Software 💻",
+      hasButton: true,
+      buttonText: "My Career Profile",
+      buttonLink: "/career",
+    },
+    {
+      text: "I Make Music 🎵",
+      hasButton: true,
       buttonText: "Listen to my tracks",
-      buttonLink: "https://google.com",
+      buttonLink: "https://soundcloud.com/mirextunes",
     },
     {
-      text: "I Develop Software",
-      buttonText: "See My Career Profile",
-      buttonLink: "https://google.com",
-    },
-    {
-      text: "I Love coffee",
-      buttonText: "Find out!",
-      buttonLink: "https://google.com",
+      text: "I Love coffee ☕️",
+      hasButton: false,
+      buttonText: "",
+      buttonLink: "",
     },
     {
       text: "I write about these!",
+      hasButton: true,
       buttonText: "See My Blog!",
       buttonLink: "/blog",
+    },
+
+    {
+      text: "Talk ? 💬",
+      hasButton: true,
+      buttonText: "My Contact Information",
+      buttonLink: "/contact",
     },
   ];
 
@@ -45,12 +56,20 @@ function index() {
         return prev - 1;
       });
   };
-
+  var current = data[activeIndex];
   useEffect(() => {
     var timeOut = setInterval(nextSlide, 4000);
     return () => clearInterval(timeOut);
   });
-  var current = data[activeIndex];
+  const button = current.hasButton ? (
+    <Link href={current.buttonLink}>
+      <a className={styles.slider_button}>
+        <p className={styles.slider_button_text}>{current.buttonText}</p>
+        <img src="arrow.svg" alt="" className={styles.slider_button_icon} />
+      </a>
+    </Link>
+  ) : null;
+
   return (
     <div className={styles.slider}>
       <div className={styles.slider_nav}>
@@ -58,16 +77,16 @@ function index() {
         <VscTriangleRight className={styles.icon} onClick={nextSlide} />
       </div>
 
-      <p className={styles.slider_text}>{current.text}</p>
-      <Link href={current.buttonLink}>
-        <a className={styles.slider_button}>
-          <p className={styles.slider_button_text}>{current.buttonText}</p>
-          <img src="arrow.svg" className={styles.slider_button_icon} />
-        </a>
-      </Link>
+      <p
+        className={
+          current.hasButton ? styles.slider_text : styles.slider_text_center
+        }>
+        {current.text}
+      </p>
+      {button}
       <div className={styles.slider_arrow}></div>
     </div>
   );
 }
 
-export default index;
+export default Slider;

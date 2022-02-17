@@ -7,6 +7,15 @@
   justify-content: space-between;
   align-items: center;
 }
+.header_dark {
+  background-color: var(--black-green);
+  width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .header_text {
   color: white;
   font-weight: bold;
