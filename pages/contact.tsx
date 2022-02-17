@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Header from "../components/Header";
 import styles from "../styles/Contact.module.css";
-import Link from "next/Link";
+import Link from "next/link";
 import Head from "next/head";
 import { FaStackOverflow, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { ImSoundcloud2 } from "react-icons/im";

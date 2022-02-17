@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import styles from "./Slider.module.css";
 import { useState, useEffect } from "react";
 import { VscTriangleLeft, VscTriangleRight } from "react-icons/vsc";

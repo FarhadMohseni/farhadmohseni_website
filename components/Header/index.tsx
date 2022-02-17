@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import Link from "next/Link";
+import Link from "next/link";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 interface Props {
   text: string;
